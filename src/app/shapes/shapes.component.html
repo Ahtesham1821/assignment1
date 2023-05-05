@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="shapes.component.css">
+<p>shapes works!</p>
+
+
+    <label>Length</label> <br>
+    <input type="number" placeholder="Enter Length " [(ngModel)]="l" name="l"  id="l ">
+    <br> <br>
+    <label>Breadth</label> <br>
+    <input type="number" placeholder="Enter Breadth"[(ngModel)]="b"  name="b"    id="b ">
+    <br> <br>
+    <label>Height</label> <br>
+    <input type="number" placeholder="Enter height" [(ngModel)]="h"  name="h"  id="h" >
+    <br> <br>
+    <Button type="submit" (click)="submit(l,b,h)" class="btn green">Submit</Button>
+
+<div *ngFor="let Area of data1" ><app-cube [Area]="Area" (AreaCalculated)="AreaCalculated($event)"></app-cube>
+</div>
